@@ -3,45 +3,36 @@ import { D1, btnPrimary, btnGhost, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 import SubHeader from '../components/SubHeader'
 
-const MC_URL = 'https://github.us7.list-manage.com/subscribe/post-json' +
-  '?u=41bab07fdd74a26b816e05e78&id=b47c3b73d9&f_id=003cf4e3f0'
-
 function NewsletterForm() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [errMsg, setErrMsg] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!email || status === 'loading') return
     setStatus('loading')
-
-    const cb = `mc_${Date.now()}`
-    const url = `${MC_URL}&EMAIL=${encodeURIComponent(email)}&c=${cb}`
-
-    let script
-    window[cb] = (data) => {
-      delete window[cb]
-      script?.remove()
-      if (data.result === 'success') {
+    try {
+      const res = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'api-key': import.meta.env.VITE_BREVO_API_KEY,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({ email, updateEnabled: true }),
+      })
+      if (res.status === 201 || res.status === 204) {
         setStatus('success')
       } else {
-        const tmp = document.createElement('div')
-        tmp.innerHTML = data.msg || 'Error desconocido.'
-        setErrMsg(tmp.textContent)
+        const data = await res.json().catch(() => ({}))
+        setErrMsg(data.message || 'Error al suscribirse.')
         setStatus('error')
       }
-    }
-
-    script = document.createElement('script')
-    script.onerror = () => {
-      delete window[cb]
-      script?.remove()
+    } catch {
       setErrMsg('Error de conexión. Intentá de nuevo.')
       setStatus('error')
     }
-    script.src = url
-    document.head.appendChild(script)
   }
 
   if (status === 'success') {
