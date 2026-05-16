@@ -1,3 +1,5 @@
+export const asset = (path) => `${import.meta.env.BASE_URL}${path}`
+
 export const D1 = {
   bg: 'var(--crudo)',
   ink: 'var(--carbon)',

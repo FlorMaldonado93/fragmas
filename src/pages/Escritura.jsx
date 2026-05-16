@@ -1,4 +1,4 @@
-import { D1, btnPrimary, btnGhost } from '../tokens'
+import { D1, btnPrimary, btnGhost, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 import SubHeader from '../components/SubHeader'
 
@@ -10,7 +10,7 @@ export default function Escritura() {
       {/* Refugio */}
       <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 64, marginTop: 48, alignItems: 'start' }}>
         <div>
-          <img src="/assets/refugio-cover.png" alt="Refugio · portada"
+          <img src={asset('assets/refugio-cover.png')} alt="Refugio · portada"
                style={{ width: '100%', display: 'block' }} />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function Escritura() {
         <SectionRule color={D1.cobre} label="Próximamente · 02" />
         <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 64, marginTop: 32, alignItems: 'start' }}>
           <div>
-            <img src="/assets/travesia-cover.png" alt="Travesía · portada"
+            <img src={asset('assets/travesia-cover.png')} alt="Travesía · portada"
                  style={{ width: '100%', display: 'block' }} />
           </div>
           <div>

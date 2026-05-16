@@ -1,4 +1,4 @@
-import { D1 } from '../tokens'
+import { D1, asset } from '../tokens'
 import Footer from './Footer'
 
 const TABS = [
@@ -18,7 +18,7 @@ export default function Chrome({ page, setPage, children }) {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
              onClick={() => setPage('inicio')}>
-          <img src="/assets/fragmas-logo-horizontal.png" alt="Fragmas"
+          <img src={asset('assets/fragmas-logo-horizontal.png')} alt="Fragmas"
                style={{ height: 56, width: 'auto', objectFit: 'contain', display: 'block' }} />
         </div>
 

@@ -1,4 +1,4 @@
-import { D1, footerLinkStyle } from '../tokens'
+import { D1, footerLinkStyle, asset } from '../tokens'
 
 export default function Footer({ setPage }) {
   return (
@@ -13,7 +13,7 @@ export default function Footer({ setPage }) {
         gap: 48, alignItems: 'start',
       }}>
         <div>
-          <img src="/assets/fragmas-logo-horizontal.png" alt="Fragmas"
+          <img src={asset('assets/fragmas-logo-horizontal.png')} alt="Fragmas"
                style={{ height: 44, width: 'auto', objectFit: 'contain', display: 'block' }} />
           <p style={{
             margin: '18px 0 0', fontFamily: D1.serif, fontSize: 15,
@@ -75,7 +75,7 @@ export default function Footer({ setPage }) {
         color: `${D1.ink}77`, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: 10,
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <img src="/assets/fragmas-favicon.png" alt="" style={{ width: 20, height: 20, objectFit: 'contain' }} />
+          <img src={asset('assets/fragmas-favicon.png')} alt="" style={{ width: 20, height: 20, objectFit: 'contain' }} />
           © 2026 Fragmas · Florencia Maldonado
         </div>
         <div>Hecho en la Patagonia · es-AR · v1.0</div>

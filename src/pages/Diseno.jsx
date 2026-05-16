@@ -1,14 +1,14 @@
-import { D1, btnPrimary } from '../tokens'
+import { D1, btnPrimary, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 import SubHeader from '../components/SubHeader'
 
 const CALENDAR_PAGES = [
-  { src: '/assets/calendario/01.png', label: 'Portada · 2026' },
-  { src: '/assets/calendario/02.png', label: 'Mes ilustrado · cocina' },
-  { src: '/assets/calendario/03.png', label: 'Enero · grilla' },
-  { src: '/assets/calendario/04.png', label: 'Mes ilustrado · vestidor' },
-  { src: '/assets/calendario/05.png', label: 'Febrero · grilla' },
-  { src: '/assets/calendario/06.png', label: 'Mes ilustrado · terrazo' },
+  { src: asset('assets/calendario/01.png'), label: 'Portada · 2026' },
+  { src: asset('assets/calendario/02.png'), label: 'Mes ilustrado · cocina' },
+  { src: asset('assets/calendario/03.png'), label: 'Enero · grilla' },
+  { src: asset('assets/calendario/04.png'), label: 'Mes ilustrado · vestidor' },
+  { src: asset('assets/calendario/05.png'), label: 'Febrero · grilla' },
+  { src: asset('assets/calendario/06.png'), label: 'Mes ilustrado · terrazo' },
 ]
 
 function CalendarioMockup() {
@@ -145,7 +145,7 @@ export default function Diseno() {
                   amoblamientospatagonicos.com
                 </div>
               </div>
-              <img src="/assets/amoblamientos-site.png" alt="Amoblamientos Patagónicos · sitio web"
+              <img src={asset('assets/amoblamientos-site.png')} alt="Amoblamientos Patagónicos · sitio web"
                    style={{ width: '100%', display: 'block' }} />
             </div>
 

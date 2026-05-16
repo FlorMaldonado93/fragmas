@@ -1,4 +1,4 @@
-import { D1, btnPrimary } from '../tokens'
+import { D1, btnPrimary, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 
 function SubInline({ color, onClick, children }) {
@@ -99,7 +99,7 @@ export default function Home({ setPage }) {
         </div>
 
         <aside>
-          <img src="/assets/flor-retrato.jpg" alt="Florencia Maldonado"
+          <img src={asset('assets/flor-retrato.jpg')} alt="Florencia Maldonado"
                style={{
                  width: '100%', aspectRatio: '3/4', objectFit: 'cover',
                  objectPosition: 'center top', display: 'block',

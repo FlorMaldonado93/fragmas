@@ -1,4 +1,4 @@
-import { D1, btnPrimary } from '../tokens'
+import { D1, btnPrimary, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 import SubHeader from '../components/SubHeader'
 import { useTwitchVODs } from '../hooks/useTwitchVODs'
@@ -103,7 +103,7 @@ export default function Streaming() {
             position: 'absolute', inset: 0,
             background: 'radial-gradient(circle at 50% 70%, #5A3838 0%, #2A1F1F 75%)',
           }} />
-          <img src="/assets/hormiga-iso.png" alt="HormigaViajera"
+          <img src={asset('assets/hormiga-iso.png')} alt="HormigaViajera"
                style={{
                  position: 'relative', height: '92%', width: 'auto',
                  objectFit: 'contain', filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.45))',
