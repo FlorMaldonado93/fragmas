@@ -11,18 +11,17 @@ const TABS = [
 export default function Chrome({ page, setPage, children }) {
   return (
     <div style={{ background: D1.bg, minHeight: '100vh', width: '100%' }}>
-      <header style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '24px 56px', borderBottom: `1px solid ${D1.ink}15`,
+      <header className="fr-header" style={{
+        borderBottom: `1px solid ${D1.ink}15`,
         position: 'sticky', top: 0, background: D1.bg, zIndex: 100,
       }}>
         <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
              onClick={() => setPage('inicio')}>
           <img src={asset('assets/fragmas-logo-horizontal.png')} alt="Fragmas"
-               style={{ height: 56, width: 'auto', objectFit: 'contain', display: 'block' }} />
+               style={{ height: 48, width: 'auto', objectFit: 'contain', display: 'block' }} />
         </div>
 
-        <nav style={{ display: 'flex', gap: 28 }}>
+        <nav className="fr-nav">
           {TABS.map(([k, label]) => (
             <button key={k} onClick={() => setPage(k)}
               style={{
@@ -39,7 +38,7 @@ export default function Chrome({ page, setPage, children }) {
           ))}
         </nav>
 
-        <div style={{
+        <div className="fr-hide-mobile" style={{
           fontFamily: D1.mono, fontSize: 10,
           color: `${D1.ink}66`, letterSpacing: '0.05em',
         }}>

@@ -4,11 +4,11 @@ import SubHeader from '../components/SubHeader'
 
 export default function Escritura() {
   return (
-    <main style={{ padding: '60px 56px 0' }}>
+    <main className="fr-page">
       <SubHeader color={D1.azul} kicker="Flor Maldonado" title="Escritura" eyebrow="/escritura" />
 
       {/* Refugio */}
-      <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 64, marginTop: 48, alignItems: 'start' }}>
+      <div className="fr-book" style={{ marginTop: 48 }}>
         <div>
           <img src={asset('assets/refugio-cover.png')} alt="Refugio · portada"
                style={{ width: '100%', display: 'block' }} />
@@ -59,7 +59,7 @@ export default function Escritura() {
       {/* Travesía */}
       <section style={{ marginTop: 96 }}>
         <SectionRule color={D1.cobre} label="Próximamente · 02" />
-        <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 64, marginTop: 32, alignItems: 'start' }}>
+        <div className="fr-book" style={{ marginTop: 32 }}>
           <div>
             <img src={asset('assets/travesia-cover.png')} alt="Travesía · portada"
                  style={{ width: '100%', display: 'block' }} />
@@ -107,10 +107,9 @@ export default function Escritura() {
 
       {/* Newsletter */}
       <section style={{ marginTop: 80 }}>
-        <div style={{
+        <div className="fr-newsletter" style={{
           padding: '32px 36px', background: D1.beige,
           border: `1px dashed ${D1.azul}55`,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32,
         }}>
           <div>
             <div style={{

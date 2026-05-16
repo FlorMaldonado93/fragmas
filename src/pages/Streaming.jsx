@@ -44,9 +44,7 @@ function VODGrid() {
 
   if (vods === null) {
     return (
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, marginTop: 24,
-      }}>
+      <div className="fr-vod-grid" style={{ marginTop: 24 }}>
         {[0, 1, 2].map((i) => (
           <div key={i}>
             <div style={{
@@ -78,7 +76,7 @@ function VODGrid() {
   }
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, marginTop: 24 }}>
+    <div className="fr-vod-grid" style={{ marginTop: 24 }}>
       {vods.map((v) => <VODCard key={v.id} vod={v} />)}
     </div>
   )
@@ -86,7 +84,7 @@ function VODGrid() {
 
 export default function Streaming() {
   return (
-    <main style={{ padding: '60px 56px 0' }}>
+    <main className="fr-page">
       <SubHeader
         color={D1.musgo}
         kicker="HormigaViajera"
@@ -94,7 +92,7 @@ export default function Streaming() {
         eyebrow="twitch.tv/hormigaviajera"
       />
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: 56, marginTop: 48, alignItems: 'center' }}>
+      <div className="fr-stream-hero" style={{ marginTop: 48 }}>
         <div style={{
           position: 'relative', aspectRatio: '16/9', background: '#3D2A2A',
           overflow: 'hidden', display: 'flex', alignItems: 'flex-end', justifyContent: 'center',

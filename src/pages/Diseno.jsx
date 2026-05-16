@@ -14,7 +14,7 @@ const CALENDAR_PAGES = [
 function CalendarioMockup() {
   return (
     <div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 }}>
+      <div className="fr-cal-grid">
         {CALENDAR_PAGES.map((p) => (
           <figure key={p.src} style={{ margin: 0 }}>
             <div style={{
@@ -35,10 +35,7 @@ function CalendarioMockup() {
         ))}
       </div>
 
-      <div style={{
-        marginTop: 36, display: 'grid',
-        gridTemplateColumns: '1.4fr 1fr', gap: 36, alignItems: 'flex-start',
-      }}>
+      <div className="fr-two-wide" style={{ marginTop: 36 }}>
         <p style={{
           margin: 0, fontFamily: D1.serif, fontSize: 18,
           lineHeight: 1.55, color: `${D1.ink}C8`,
@@ -65,7 +62,7 @@ function CalendarioMockup() {
 
 export default function Diseno() {
   return (
-    <main style={{ padding: '60px 56px 0' }}>
+    <main className="fr-page">
       <SubHeader color={D1.cobre} kicker="Flucty" title="Diseño" eyebrow="UX/UI · gráfico · freelance" />
       <p style={{
         marginTop: 28, fontFamily: D1.serif, fontSize: 22,
@@ -128,7 +125,7 @@ export default function Diseno() {
             Diseño visual · UX · catálogo digital · 2025
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 36, alignItems: 'flex-start' }}>
+          <div className="fr-two-wide">
             <div style={{ background: '#fff', border: `1px solid ${D1.ink}15`, overflow: 'hidden' }}>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 8, padding: '10px 14px',
@@ -203,7 +200,7 @@ export default function Diseno() {
       {/* Servicios */}
       <section style={{ marginTop: 96 }}>
         <SectionRule color={D1.cobre} label="Servicios · 02" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 32, marginTop: 24 }}>
+        <div className="fr-cards" style={{ marginTop: 24 }}>
           {[
             ['Identidad', 'Logotipo, paleta, tipografías y guía mínima de uso. Para emprendimientos que están por nacer o que necesitan ordenarse.'],
             ['UX/UI', 'Diseño de producto digital: web, app o herramienta interna. Trabajo iterativo con vos y con quien implementa.'],

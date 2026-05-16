@@ -56,3 +56,40 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* ── Responsive layout classes ─────────────────────── */
+.fr-page         { padding: 60px 56px 0; }
+.fr-header       { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; }
+.fr-nav          { display: flex; gap: 28px; }
+
+.fr-hero         { display: grid; grid-template-columns: 1fr 360px; gap: 64px; align-items: start; }
+.fr-cards        { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.fr-values       { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; }
+.fr-book         { display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
+.fr-stream-hero  { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: center; }
+.fr-vod-grid     { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.fr-cal-grid     { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.fr-two-wide     { display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; align-items: flex-start; }
+.fr-footer-grid  { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; align-items: start; }
+.fr-newsletter   { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+
+@media (max-width: 768px) {
+  .fr-page        { padding: 32px 20px 0; }
+  .fr-header      { padding: 14px 20px; flex-wrap: wrap; }
+  .fr-nav         { order: 3; width: 100%; flex-wrap: wrap; gap: 4px 16px;
+                    border-top: 1px solid rgba(42,42,42,0.08);
+                    margin-top: 12px; padding-top: 12px; }
+  .fr-hide-mobile { display: none !important; }
+
+  .fr-hero        { grid-template-columns: 1fr; gap: 32px; }
+  .fr-hero aside  { order: -1; }
+  .fr-cards       { grid-template-columns: 1fr; gap: 16px; }
+  .fr-values      { grid-template-columns: 1fr; gap: 24px; }
+  .fr-book        { grid-template-columns: 1fr; gap: 24px; }
+  .fr-stream-hero { grid-template-columns: 1fr; gap: 24px; }
+  .fr-vod-grid    { grid-template-columns: 1fr; }
+  .fr-cal-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .fr-two-wide    { grid-template-columns: 1fr; gap: 24px; }
+  .fr-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .fr-newsletter  { flex-direction: column; align-items: flex-start; }
+}

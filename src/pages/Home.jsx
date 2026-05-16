@@ -51,8 +51,8 @@ function SubCard({ n, color, kicker, title, body, tag, onClick }) {
 
 export default function Home({ setPage }) {
   return (
-    <main style={{ padding: '60px 56px 0' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: 64, alignItems: 'start' }}>
+    <main className="fr-page">
+      <div className="fr-hero">
         <div>
           <div style={{
             fontFamily: D1.mono, fontSize: 11, letterSpacing: '0.18em',
@@ -118,7 +118,7 @@ export default function Home({ setPage }) {
       {/* Sub-marca cards */}
       <section style={{ marginTop: 96 }}>
         <SectionRule color={D1.cobre} label="Los fragmentos · 02" />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, marginTop: 28 }}>
+        <div className="fr-cards" style={{ marginTop: 28 }}>
           <SubCard n="i." color={D1.azul} kicker="Flor Maldonado" title="Escritura"
             body="Refugio. Travesía. Y lo que venga después. Libros sobre el lugar al que volvemos cuando nos perdemos."
             tag="autora · ensayo · narrativa" onClick={() => setPage('escritura')} />
@@ -140,7 +140,7 @@ export default function Home({ setPage }) {
         }}>
           Lo que sostiene a las tres sub-marcas, sin importar el canal.
         </p>
-        <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px 56px' }}>
+        <div className="fr-values" style={{ marginTop: 32 }}>
           {[
             ['Multiplicidad sin disolución', 'Cada fragmento se sostiene profesionalmente. Ningún frente se trata como hobby de relleno.', D1.azul],
             ['Honestidad', 'No se finge, no se infla. Se dice lo que pasa, lo que se sabe y lo que no. Aplica a todo.', D1.cobre],

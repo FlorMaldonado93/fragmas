@@ -8,10 +8,7 @@ export default function Footer({ setPage }) {
       fontFamily: D1.mono, fontSize: 11,
       color: `${D1.ink}99`, letterSpacing: '0.04em',
     }}>
-      <div style={{
-        display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr',
-        gap: 48, alignItems: 'start',
-      }}>
+      <div className="fr-footer-grid">
         <div>
           <img src={asset('assets/fragmas-logo-horizontal.png')} alt="Fragmas"
                style={{ height: 44, width: 'auto', objectFit: 'contain', display: 'block' }} />
