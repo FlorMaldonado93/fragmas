@@ -92,4 +92,6 @@ html, body {
   .fr-two-wide    { grid-template-columns: 1fr; gap: 24px; }
   .fr-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
   .fr-newsletter  { flex-direction: column; align-items: flex-start; }
+  .fr-newsletter-fields { width: 100%; }
+  .fr-newsletter-fields input { flex: 1; min-width: 0; }
 }

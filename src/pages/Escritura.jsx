@@ -1,6 +1,112 @@
+import { useState } from 'react'
 import { D1, btnPrimary, btnGhost, asset } from '../tokens'
 import SectionRule from '../components/SectionRule'
 import SubHeader from '../components/SubHeader'
+
+const MC_URL = 'https://github.us7.list-manage.com/subscribe/post-json' +
+  '?u=41bab07fdd74a26b816e05e78&id=b47c3b73d9&f_id=003cf4e3f0'
+
+function NewsletterForm() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [errMsg, setErrMsg] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (!email || status === 'loading') return
+    setStatus('loading')
+
+    const cb = `mc_${Date.now()}`
+    const url = `${MC_URL}&EMAIL=${encodeURIComponent(email)}&c=${cb}`
+
+    let script
+    window[cb] = (data) => {
+      delete window[cb]
+      script?.remove()
+      if (data.result === 'success') {
+        setStatus('success')
+      } else {
+        const tmp = document.createElement('div')
+        tmp.innerHTML = data.msg || 'Error desconocido.'
+        setErrMsg(tmp.textContent)
+        setStatus('error')
+      }
+    }
+
+    script = document.createElement('script')
+    script.onerror = () => {
+      delete window[cb]
+      script?.remove()
+      setErrMsg('Error de conexión. Intentá de nuevo.')
+      setStatus('error')
+    }
+    script.src = url
+    document.head.appendChild(script)
+  }
+
+  if (status === 'success') {
+    return (
+      <div style={{
+        padding: '32px 36px', background: D1.beige,
+        border: `1px dashed ${D1.azul}55`,
+      }}>
+        <div style={{ fontFamily: D1.serif, fontStyle: 'italic', fontSize: 22, color: D1.azul }}>
+          ¡Gracias! Te avisamos en cuanto salga Travesía.
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} noValidate>
+      <div className="fr-newsletter" style={{
+        padding: '32px 36px', background: D1.beige,
+        border: `1px dashed ${D1.azul}55`,
+      }}>
+        <div>
+          <div style={{
+            fontFamily: D1.mono, fontSize: 10, letterSpacing: '0.14em',
+            color: D1.azul, textTransform: 'uppercase',
+          }}>
+            Newsletter
+          </div>
+          <div style={{ fontFamily: D1.serif, fontSize: 26, fontStyle: 'italic', color: D1.ink, marginTop: 6 }}>
+            Que te avise cuando salga Travesía.
+          </div>
+          {status === 'error' && (
+            <div style={{ marginTop: 8, fontFamily: D1.mono, fontSize: 11, color: D1.terra }}>
+              {errMsg}
+            </div>
+          )}
+        </div>
+        <div className="fr-newsletter-fields" style={{ display: 'flex', flexShrink: 0 }}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="tu@correo.com"
+            required
+            style={{
+              width: 220, padding: '14px 16px',
+              fontFamily: D1.serif, fontSize: 16,
+              background: 'rgba(255,255,255,0.6)',
+              border: `1px solid ${D1.azul}55`, borderRight: 'none',
+              color: D1.ink, outline: 'none',
+            }}
+          />
+          <button type="submit" disabled={status === 'loading'} style={{
+            ...btnPrimary(D1.azul, D1.bg),
+            opacity: status === 'loading' ? 0.7 : 1,
+            cursor: status === 'loading' ? 'default' : 'pointer',
+            whiteSpace: 'nowrap',
+          }}>
+            {status === 'loading' ? 'Enviando…' : 'Suscribirme'}
+          </button>
+        </div>
+      </div>
+    </form>
+  )
+}
 
 export default function Escritura() {
   return (
@@ -107,23 +213,7 @@ export default function Escritura() {
 
       {/* Newsletter */}
       <section style={{ marginTop: 80 }}>
-        <div className="fr-newsletter" style={{
-          padding: '32px 36px', background: D1.beige,
-          border: `1px dashed ${D1.azul}55`,
-        }}>
-          <div>
-            <div style={{
-              fontFamily: D1.mono, fontSize: 10, letterSpacing: '0.14em',
-              color: D1.azul, textTransform: 'uppercase',
-            }}>
-              Newsletter
-            </div>
-            <div style={{ fontFamily: D1.serif, fontSize: 26, fontStyle: 'italic', color: D1.ink, marginTop: 6 }}>
-              Que te avise cuando salga Travesía.
-            </div>
-          </div>
-          <button style={btnPrimary(D1.azul, D1.bg)}>Suscribirme</button>
-        </div>
+        <NewsletterForm />
       </section>
 
       {/* Bio */}
