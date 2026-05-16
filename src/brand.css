@@ -1,0 +1,58 @@
+/* Fragmas — brand tokens (Brandbook v1.0) */
+:root {
+  --azul-lago: #2C4A6B;
+  --azul-niebla: #7A92A8;
+  --cobre: #B66E3F;
+  --terracota: #C28B6E;
+  --beige: #EFE5D6;
+  --musgo: #5A6B4F;
+  --carbon: #2A2A2A;
+  --crudo: #F7F2EA;
+
+  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--crudo);
+  font-family: var(--sans);
+  color: var(--carbon);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Placeholder for missing imagery */
+.fr-ph {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(42,42,42,0.04) 0 2px,
+      transparent 2px 14px
+    ),
+    var(--ph-bg, #E8DFCF);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.fr-ph::after {
+  content: attr(data-label);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: rgba(42,42,42,0.55);
+  padding: 8px 10px;
+  text-transform: lowercase;
+}
+
+.fr-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
