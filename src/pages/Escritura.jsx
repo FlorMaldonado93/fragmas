@@ -20,7 +20,7 @@ function NewsletterForm() {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        body: JSON.stringify({ email, updateEnabled: true }),
+        body: JSON.stringify({ email, listIds: [6], updateEnabled: true }),
       })
       if (res.status === 201 || res.status === 204) {
         setStatus('success')
