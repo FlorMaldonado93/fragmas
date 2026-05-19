@@ -75,36 +75,10 @@ export default function Diseno() {
       <section style={{ marginTop: 56 }}>
         <SectionRule color={D1.cobre} label="Casos · 01" />
 
-        {/* Caso 01 — Calendario */}
+        {/* Caso 01 — Sitio web */}
         <div style={{ marginTop: 28 }}>
           <div style={{ display: 'flex', gap: 14, alignItems: 'baseline' }}>
             <div style={{ fontFamily: D1.serif, fontSize: 38, fontStyle: 'italic', color: D1.cobre }}>01</div>
-            <div style={{
-              fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}77`,
-              letterSpacing: '0.14em', textTransform: 'uppercase',
-            }}>
-              Amoblamientos Patagónicos · pieza ancla
-            </div>
-          </div>
-          <h3 style={{
-            margin: '4px 0 8px', fontFamily: D1.serif, fontSize: 36,
-            fontWeight: 400, color: D1.ink, lineHeight: 1.15,
-          }}>
-            Calendario 2026
-          </h3>
-          <div style={{
-            fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}88`,
-            letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 18,
-          }}>
-            Diseño gráfico · dirección de arte · 26 páginas · 2025
-          </div>
-          <CalendarioMockup />
-        </div>
-
-        {/* Caso 02 — Sitio web */}
-        <div style={{ marginTop: 80 }}>
-          <div style={{ display: 'flex', gap: 14, alignItems: 'baseline' }}>
-            <div style={{ fontFamily: D1.serif, fontSize: 38, fontStyle: 'italic', color: D1.cobre }}>02</div>
             <div style={{
               fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}77`,
               letterSpacing: '0.14em', textTransform: 'uppercase',
@@ -122,7 +96,7 @@ export default function Diseno() {
             fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}88`,
             letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 18,
           }}>
-            Diseño visual · UX · catálogo digital · 2025
+            Diseño visual · UX · catálogo digital · 2024
           </div>
 
           <div className="fr-two-wide">
@@ -151,9 +125,8 @@ export default function Diseno() {
                 margin: 0, fontFamily: D1.serif, fontSize: 18,
                 lineHeight: 1.55, color: `${D1.ink}C8`,
               }}>
-                Sitio institucional + catálogo digital de la marca. Diseño visual y experiencia
-                a cargo de Flucty, manteniendo continuidad con la identidad del calendario y la
-                comunicación impresa.
+                Sitio institucional y catálogo digital de la marca. Diseño visual y experiencia
+                a cargo de Flucty, manteniendo la identidad y comunicación de la empresa.
               </p>
               <div style={{
                 marginTop: 22, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12,
@@ -161,7 +134,7 @@ export default function Diseno() {
                 color: `${D1.ink}99`, textTransform: 'uppercase',
               }}>
                 <div><div style={{ color: D1.cobre }}>Rol Flucty</div><div style={{ marginTop: 4 }}>Diseño visual · UX</div></div>
-                <div><div style={{ color: D1.cobre }}>Estado</div><div style={{ marginTop: 4 }}>En producción</div></div>
+                <div><div style={{ color: D1.cobre }}>Estado</div><div style={{ marginTop: 4 }}>Finalizado</div></div>
               </div>
               <div style={{ marginTop: 26 }}>
                 <a href="https://amoblamientospatagonicos.com/" target="_blank" rel="noopener"
@@ -171,6 +144,32 @@ export default function Diseno() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Caso 02 — Calendario */}
+        <div style={{ marginTop: 80 }}>
+          <div style={{ display: 'flex', gap: 14, alignItems: 'baseline' }}>
+            <div style={{ fontFamily: D1.serif, fontSize: 38, fontStyle: 'italic', color: D1.cobre }}>02</div>
+            <div style={{
+              fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}77`,
+              letterSpacing: '0.14em', textTransform: 'uppercase',
+            }}>
+              Amoblamientos Patagónicos · pieza ancla
+            </div>
+          </div>
+          <h3 style={{
+            margin: '4px 0 8px', fontFamily: D1.serif, fontSize: 36,
+            fontWeight: 400, color: D1.ink, lineHeight: 1.15,
+          }}>
+            Calendario 2026
+          </h3>
+          <div style={{
+            fontFamily: D1.mono, fontSize: 10, color: `${D1.ink}88`,
+            letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 18,
+          }}>
+            Diseño gráfico · dirección de arte · 26 páginas · 2025
+          </div>
+          <CalendarioMockup />
         </div>
 
         {/* Caso 03 — Próximo */}
