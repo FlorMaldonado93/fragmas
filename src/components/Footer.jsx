@@ -45,7 +45,7 @@ export default function Footer({ setPage }) {
           <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
             <li><a href="https://a.co/d/02h3skLA" target="_blank" rel="noopener" style={footerLinkStyle()}>↗ Amazon KDP</a></li>
             <li><a href="https://twitch.tv/hormigaviajera" target="_blank" rel="noopener" style={footerLinkStyle()}>↗ Twitch</a></li>
-            <li><a href="#" style={footerLinkStyle()}>↗ Instagram</a></li>
+            <li><a href="https://www.instagram.com/florencia.maldonado.ok/" target="_blank" rel="noopener" style={footerLinkStyle()}>↗ Instagram</a></li>
           </ul>
         </div>
 
