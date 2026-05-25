@@ -13,8 +13,8 @@ export default function Footer({ setPage }) {
           <img src={asset('assets/fragmas-logo-horizontal.png')} alt="Fragmas"
                style={{ height: 44, width: 'auto', objectFit: 'contain', display: 'block' }} />
           <p style={{
-            margin: '18px 0 0', fontFamily: D1.serif, fontSize: 15,
-            lineHeight: 1.55, color: `${D1.ink}A0`, fontStyle: 'italic', maxWidth: 280,
+            margin: '18px 0 0', fontFamily: D1.serifBody, fontSize: 15,
+            lineHeight: 1.6, color: `${D1.ink}A0`, fontStyle: 'italic', maxWidth: 280,
           }}>
             Tres oficios, una sola persona. Escritura, streaming y diseño desde
             Bariloche, Patagonia argentina.
@@ -56,7 +56,7 @@ export default function Footer({ setPage }) {
           }}>
             Base
           </div>
-          <div style={{ fontFamily: D1.serif, fontSize: 15, color: D1.ink, lineHeight: 1.5 }}>
+          <div style={{ fontFamily: D1.serifBody, fontSize: 15, color: D1.ink, lineHeight: 1.5 }}>
             Bariloche<br />
             <span style={{ color: `${D1.ink}88` }}>41° 08′ S · 71° 18′ O</span>
           </div>

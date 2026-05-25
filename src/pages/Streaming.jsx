@@ -26,8 +26,8 @@ function VODCard({ vod }) {
         </div>
       </div>
       <div style={{
-        marginTop: 10, fontFamily: D1.serif, fontSize: 17,
-        color: D1.ink, lineHeight: 1.3,
+        marginTop: 10, fontFamily: D1.serifBody, fontSize: 16,
+        color: D1.ink, lineHeight: 1.35,
       }}>{vod.title}</div>
       <div style={{
         marginTop: 6, fontFamily: D1.mono, fontSize: 10,
@@ -130,8 +130,8 @@ export default function Streaming() {
             Conversamos sobre vivir lejos del lugar donde naciste
           </h2>
           <p style={{
-            marginTop: 18, fontFamily: D1.serif, fontSize: 18,
-            lineHeight: 1.55, color: `${D1.ink}B0`,
+            marginTop: 18, fontFamily: D1.serifBody, fontSize: 17,
+            lineHeight: 1.6, color: `${D1.ink}B0`,
           }}>
             Just Chatting, dos horas, una invitada. Si te quedás, te leo el chat.
           </p>

@@ -9,7 +9,8 @@
   --carbon: #2A2A2A;
   --crudo: #F7F2EA;
 
-  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --serif-body: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
 }
@@ -20,7 +21,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: var(--crudo);
-  font-family: var(--sans);
+  font-family: var(--serif-body);
   color: var(--carbon);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

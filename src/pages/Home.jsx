@@ -35,12 +35,12 @@ function SubCard({ n, color, kicker, title, body, tag, onClick }) {
         letterSpacing: '0.14em', color, textTransform: 'uppercase',
       }}>{kicker}</div>
       <h3 style={{
-        margin: '6px 0 14px', fontFamily: D1.serif, fontSize: 38,
+        margin: '6px 0 14px', fontFamily: D1.serif, fontSize: 'clamp(26px, 5vw, 38px)',
         fontWeight: 400, color: D1.ink, letterSpacing: '-0.01em',
       }}>{title}</h3>
       <p style={{
-        margin: 0, fontFamily: D1.serif, fontSize: 16,
-        lineHeight: 1.55, color: `${D1.ink}B0`, flex: 1,
+        margin: 0, fontFamily: D1.serifBody, fontSize: 15,
+        lineHeight: 1.6, color: `${D1.ink}B0`, flex: 1,
       }}>{body}</p>
       <div style={{ marginTop: 22, fontFamily: D1.sans, fontSize: 12, color, letterSpacing: '0.04em' }}>
         Entrar al fragmento →
@@ -70,7 +70,7 @@ export default function Home({ setPage }) {
           </h1>
 
           <div style={{
-            marginTop: 44, fontFamily: D1.serif, fontSize: 22, lineHeight: 1.55,
+            marginTop: 44, fontFamily: D1.serifBody, fontSize: 21, lineHeight: 1.6,
             color: `${D1.ink}D0`, maxWidth: 720,
           }}>
             <p style={{ margin: 0 }}>
@@ -106,8 +106,8 @@ export default function Home({ setPage }) {
                  boxShadow: `8px 12px 0 ${D1.azul}18, 0 2px 12px ${D1.ink}18`,
                }} />
           <div style={{
-            marginTop: 14, fontFamily: D1.serif, fontStyle: 'italic',
-            fontSize: 14, color: `${D1.ink}99`, lineHeight: 1.5,
+            marginTop: 14, fontFamily: D1.serifBody, fontStyle: 'italic',
+            fontSize: 14, color: `${D1.ink}99`, lineHeight: 1.55,
           }}>
             Florencia Maldonado escribe, transmite y diseña desde Bariloche.
             Vive entre el lago Nahuel Huapi y un escritorio con un gato encima.
@@ -135,8 +135,8 @@ export default function Home({ setPage }) {
       <section style={{ marginTop: 96, paddingBottom: 0 }}>
         <SectionRule color={D1.cobre} label="Valores · 03" />
         <p style={{
-          marginTop: 18, fontFamily: D1.serif, fontStyle: 'italic',
-          fontSize: 18, color: `${D1.ink}99`, maxWidth: 720,
+          marginTop: 18, fontFamily: D1.serifBody, fontStyle: 'italic',
+          fontSize: 17, color: `${D1.ink}99`, maxWidth: 720, lineHeight: 1.55,
         }}>
           Lo que sostiene a las tres sub-marcas, sin importar el canal.
         </p>
@@ -159,8 +159,8 @@ export default function Home({ setPage }) {
                   fontSize: 22, color: D1.ink, letterSpacing: '-0.005em',
                 }}>{title}</h4>
                 <p style={{
-                  margin: '6px 0 0', fontFamily: D1.serif, fontSize: 16,
-                  lineHeight: 1.5, color: `${D1.ink}A8`,
+                  margin: '6px 0 0', fontFamily: D1.serifBody, fontSize: 15,
+                  lineHeight: 1.6, color: `${D1.ink}A8`,
                 }}>{body}</p>
               </div>
             </div>

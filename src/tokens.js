@@ -9,7 +9,8 @@ export const D1 = {
   terra: 'var(--terracota)',
   beige: 'var(--beige)',
   musgo: 'var(--musgo)',
-  serif: 'var(--serif)',
+  serif: 'var(--serif-body)',
+  serifBody: 'var(--serif-body)',
   sans: 'var(--sans)',
   mono: 'var(--mono)',
 }

@@ -127,16 +127,16 @@ export default function Escritura() {
             El lugar al que vuelvo cuando me pierdo
           </div>
           <p style={{
-            marginTop: 28, fontFamily: D1.serif, fontSize: 19,
-            lineHeight: 1.6, color: `${D1.ink}D0`, maxWidth: 560,
+            marginTop: 28, fontFamily: D1.serifBody, fontSize: 18,
+            lineHeight: 1.65, color: `${D1.ink}D0`, maxWidth: 560,
           }}>
             A veces el refugio es una casa con ventanas grandes. Otras, una amiga que no
             pregunta, solo escucha. A veces tiene forma de ciudad —como Bariloche, con
             sus montañas y su aire limpio— y otras veces vive adentro mío.
           </p>
           <p style={{
-            marginTop: 14, fontFamily: D1.serif, fontStyle: 'italic',
-            fontSize: 17, lineHeight: 1.6, color: `${D1.ink}A0`, maxWidth: 560,
+            marginTop: 14, fontFamily: D1.serifBody, fontStyle: 'italic',
+            fontSize: 16, lineHeight: 1.65, color: `${D1.ink}A0`, maxWidth: 560,
           }}>
             Cada texto es una puerta. Un rincón donde descansar.
           </p>
@@ -181,8 +181,8 @@ export default function Escritura() {
               Hay libros que no se leen de un tirón, se caminan.
             </p>
             <p style={{
-              marginTop: 18, fontFamily: D1.serif, fontSize: 17,
-              lineHeight: 1.6, color: `${D1.ink}C8`, maxWidth: 560,
+              marginTop: 18, fontFamily: D1.serifBody, fontSize: 16,
+              lineHeight: 1.65, color: `${D1.ink}C8`, maxWidth: 560,
             }}>
               Una colección de relatos que acompañan como una charla al borde del
               cansancio, como una pausa en medio del camino. Historias de amor,
@@ -211,8 +211,8 @@ export default function Escritura() {
       <section style={{ marginTop: 80 }}>
         <SectionRule color={D1.cobre} label="Bio · 03" />
         <p style={{
-          marginTop: 24, fontFamily: D1.serif, fontSize: 22,
-          lineHeight: 1.55, color: `${D1.ink}D0`, maxWidth: 760,
+          marginTop: 24, fontFamily: D1.serifBody, fontSize: 19,
+          lineHeight: 1.65, color: `${D1.ink}D0`, maxWidth: 760,
         }}>
           Florencia Maldonado escribe desde Bariloche. Lo que aparece son ensayos breves y
           relatos largos sobre el territorio, el regreso y las cosas que se sostienen sin

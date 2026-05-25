@@ -37,8 +37,8 @@ function CalendarioMockup() {
 
       <div className="fr-two-wide" style={{ marginTop: 36 }}>
         <p style={{
-          margin: 0, fontFamily: D1.serif, fontSize: 18,
-          lineHeight: 1.55, color: `${D1.ink}C8`,
+          margin: 0, fontFamily: D1.serifBody, fontSize: 17,
+          lineHeight: 1.6, color: `${D1.ink}C8`,
         }}>
           Calendario anual con identidad propia: una portada y doce piezas mensuales que
           alternan fotografía de ambientes con grillas de tipografía editorial sobre paleta
@@ -65,8 +65,8 @@ export default function Diseno() {
     <main className="fr-page">
       <SubHeader color={D1.cobre} kicker="Flucty" title="Diseño" eyebrow="UX/UI · gráfico · freelance" />
       <p style={{
-        marginTop: 28, fontFamily: D1.serif, fontSize: 22,
-        lineHeight: 1.55, color: `${D1.ink}C0`, maxWidth: 760,
+        marginTop: 28, fontFamily: D1.serifBody, fontSize: 19,
+        lineHeight: 1.65, color: `${D1.ink}C0`, maxWidth: 760,
       }}>
         Diseño para emprendedores pequeños. Casos con problema, propuesta y resultado.
         Sin agencia premium, sin promesas imposibles.
@@ -122,8 +122,8 @@ export default function Diseno() {
 
             <div>
               <p style={{
-                margin: 0, fontFamily: D1.serif, fontSize: 18,
-                lineHeight: 1.55, color: `${D1.ink}C8`,
+                margin: 0, fontFamily: D1.serifBody, fontSize: 17,
+                lineHeight: 1.6, color: `${D1.ink}C8`,
               }}>
                 Sitio institucional y catálogo digital de la marca. Diseño visual y experiencia
                 a cargo de Flucty, manteniendo la identidad y comunicación de la empresa.
@@ -187,8 +187,8 @@ export default function Diseno() {
             </div>
           </div>
           <p style={{
-            margin: '6px 0 0', fontFamily: D1.serif, fontSize: 16,
-            fontStyle: 'italic', color: `${D1.ink}90`, lineHeight: 1.5, maxWidth: 620,
+            margin: '6px 0 0', fontFamily: D1.serifBody, fontSize: 15,
+            fontStyle: 'italic', color: `${D1.ink}90`, lineHeight: 1.6, maxWidth: 620,
           }}>
             Estructura para el próximo cliente: contexto, alcance, propuesta visual y link al
             producto final.
@@ -208,8 +208,8 @@ export default function Diseno() {
             <div key={t}>
               <div style={{ fontFamily: D1.serif, fontSize: 26, color: D1.cobre, fontStyle: 'italic' }}>{t}</div>
               <p style={{
-                marginTop: 10, fontFamily: D1.serif, fontSize: 16,
-                lineHeight: 1.5, color: `${D1.ink}A8`,
+                marginTop: 10, fontFamily: D1.serifBody, fontSize: 15,
+                lineHeight: 1.6, color: `${D1.ink}A8`,
               }}>{d}</p>
             </div>
           ))}
